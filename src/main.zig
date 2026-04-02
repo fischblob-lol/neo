@@ -26,4 +26,24 @@ pub fn main() !void {
         utils.helpmenu();
         return;
     }
+
+    if (std.mem.eql(u8, cmd, "install") or std.mem.eql(u8, cmd, "fetch")) {
+        if (args.len < 3) { // otherwise thread goes out of bounds (not kidding debug verison is a w for showing that)
+            print("not enough arguments\n", .{});
+            return;
+        }
+
+        utils.installhandler(args[2]);
+        return;
+    }
+    
+    if (std.mem.eql(u8, cmd, "parse")) {
+        if (args.len < 3) {
+            print("not enough arguments\n", .{});
+            return;
+        }
+        
+        try utils.parsetest(allocator, args[2]);
+        return;
+    }
 }
