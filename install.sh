@@ -1,5 +1,5 @@
 # Created by Daniel on April 5th
-set e
+set -e
 echo "####################"
 echo "# NeoPkg Installer #"
 echo "####################"
