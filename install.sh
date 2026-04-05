@@ -7,7 +7,7 @@ echo "Install will start in 5 seconds. CTRL + C to abort."
 sleep 5
 echo "Starting install."
 echo "--- STEP 1: Get the NeoPkg bin ---"
-curl -o neo https://raw.githubusercontent.com/sigmaboyihate/neo/zig-out/bin/neo
+curl -o neo https://raw.githubusercontent.com/sigmaboyihate/neo/main/zig-out/bin/neo
 echo "--- STEP 2: Create Directory and move NeoPkg bin to /opt/NeoPkg/bin"
 mkdir -p /opt/NeoPkg/bin
 mv neo /opt/NeoPkg/bin/neo
