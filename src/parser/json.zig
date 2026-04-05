@@ -9,6 +9,7 @@ const packagelayout = struct {
 };
 
 // parses a file in the current cwd, its a debugging function to see if my shits straight
+// it might come out as queer
 pub fn parser(allocator: std.mem.Allocator, inputfile: [:0]u8) !void {
     const file = try std.fs.cwd().openFile(inputfile, .{});
     defer file.close();
